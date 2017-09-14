@@ -1,0 +1,544 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Publication"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/foundation/container">
+        <layout
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="granite/ui/components/foundation/layouts/tabs"
+            type="nav"/>
+        <items jcr:primaryType="nt:unstructured">
+            <Title
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Title"
+                sling:resourceType="granite/ui/components/foundation/container">
+                <layout
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"/>
+                <items jcr:primaryType="nt:unstructured">
+                    <columns
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <titletype
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/select"
+                                fieldDescription="Select the type of title to insert"
+                                fieldLabel="Title Type"
+                                name="./titleType"
+                                value="siteTitle">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <main_x0020_title
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Main Title"
+                                        value="mainTitle"/>
+                                    <paragraph_x0020_title
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Paragraph Title"
+                                        value="paragraphTitle"/>
+                                    <section_x0020_subtitle
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Section Subtitle"
+                                        value="sectionSubTitle"/>
+                                    <section_x0020_title
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Section Title"
+                                        value="sectionTitle"/>
+                                    <site_x0020_title
+                                        jcr:primaryType="nt:unstructured"
+                                        text="Site Title"
+                                        value="siteTitle"/>
+                                    <h1Title
+                                        jcr:primaryType="nt:unstructured"
+                                        text="H1 Title"
+                                        value="h1title"/>
+                                    <h2Title
+                                        jcr:primaryType="nt:unstructured"
+                                        text="H2 Title"
+                                        value="h2title"/>
+                                    <h3Title
+                                        jcr:primaryType="nt:unstructured"
+                                        text="H3 Title"
+                                        value="h3title"/>
+                                </items>
+                            </titletype>
+                            <title
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldDescription="Enter text for the section title"
+                                fieldLabel="Title"
+                                name="./title"/>
+                            <titlealign
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/radiogroup"
+                                fieldDescription="Choose how the title should be horizontally aligned"
+                                name="./titleAlignType"
+                                renderReadOnly="{Boolean}true"
+                                text="Horizontal Title Alignment">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <Left
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/foundation/form/radio"
+                                        name="./titleAlign"
+                                        renderReadOnly="{Boolean}true"
+                                        text="Left"
+                                        value="left"/>
+                                    <Center
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/foundation/form/radio"
+                                        name="./titleAlign"
+                                        renderReadOnly="{Boolean}true"
+                                        text="Center"
+                                        value="center"/>
+                                    <Right
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/foundation/form/radio"
+                                        name="./titleAlign"
+                                        renderReadOnly="{Boolean}true"
+                                        text="Right"
+                                        value="right"/>
+                                </items>
+                            </titlealign>
+                            <titlecolor/>
+                            <fontsize
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/numberfield"
+                                fieldDescription="Enter the title font size in px."
+                                fieldLabel="Title Font Size"
+                                name="./titleFontSize"/>
+                            <separatorcolor/>
+                            <verticalpadding
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/numberfield"
+                                fieldDescription="Enter the Line Separator size"
+                                fieldLabel="Vertical Padding"
+                                name="./verticalPadding"/>
+                        </items>
+                    </columns>
+                </items>
+            </Title>
+            <Text
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Text"
+                sling:resourceType="granite/ui/components/foundation/container">
+                <layout
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"/>
+                <items jcr:primaryType="nt:unstructured">
+                    <columns
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <richFlag
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/hidden"
+                                name="./textIsRich"
+                                value="true"/>
+                            <text/>
+                            <textalign
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/radiogroup"
+                                fieldDescription="Choose how the text should be horizontally aligned"
+                                name="./textAlignType"
+                                renderReadOnly="{Boolean}true"
+                                text="Horizontal Text Alignment">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <Left
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/foundation/form/radio"
+                                        name="./textAlign"
+                                        renderReadOnly="{Boolean}true"
+                                        text="Left"
+                                        value="left"/>
+                                    <Center
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/foundation/form/radio"
+                                        name="./textAlign"
+                                        renderReadOnly="{Boolean}true"
+                                        text="Center"
+                                        value="center"/>
+                                    <Right
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/foundation/form/radio"
+                                        name="./textAlign"
+                                        renderReadOnly="{Boolean}true"
+                                        text="Right"
+                                        value="right"/>
+                                </items>
+                            </textalign>
+                            <background/>
+                            <textColor/>
+                            <anchor
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldDescription="Anchor to be placed at the top of this paragraph."
+                                fieldLabel="Anchor"
+                                name="./anchor"/>
+                            <flag
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/hidden"
+                                name="./flag"/>
+                            <cta
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Call to Action Text"
+                                name="./cta"/>
+                            <ctalink
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/pathbrowser"
+                                fieldLabel="Call To Action Link"
+                                name="./ctaLink"/>
+                            <ariaLabel
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldDescription="Aria Label for Call To Action Link"
+                                fieldLabel="Aria Label"
+                                name="./aria"/>
+                        </items>
+                    </columns>
+                </items>
+            </Text>
+            <Image
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Image"
+                sling:resourceType="granite/ui/components/foundation/section">
+                <layout
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"
+                    margin="{Boolean}false"/>
+                <items jcr:primaryType="nt:unstructured">
+                    <column
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <file
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="cq/gui/components/authoring/dialog/fileupload"
+                                autoStart="{Boolean}false"
+                                class="cq-droptarget"
+                                fieldLabel="Upload Image"
+                                fileNameParameter="./image/fileName"
+                                fileReferenceParameter="./image/fileReference"
+                                mimeTypes="[image]"
+                                multiple="{Boolean}false"
+                                name="./image/file"
+                                title="Upload Image Asset"
+                                uploadUrl="${suffix.path}"
+                                useHTML5="{Boolean}true"/>
+                            <resType
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/hidden"
+                                name="./image/sling:resourceType"
+                                value="foundation/components/image"/>
+                        </items>
+                    </column>
+                </items>
+            </Image>
+            <Advanced
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Advanced"
+                sling:resourceType="granite/ui/components/foundation/container">
+                <layout
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"/>
+                <items jcr:primaryType="nt:unstructured">
+                    <columns
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <borders
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Border"
+                                sling:resourceType="granite/ui/components/foundation/form/fieldset"
+                                title="Border">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <paragraphtitle
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                        fieldLabel="Paragraph Title"
+                                        name="./paragraphTitle"/>
+                                    <borderalign
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/foundation/form/radiogroup"
+                                        fieldDescription="Choose how the border title should be horizontally aligned"
+                                        name="./borderTitleAlignType"
+                                        renderReadOnly="{Boolean}true"
+                                        text="Border Title Alignment">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <Left
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/foundation/form/radio"
+                                                name="./borderTitleAlign"
+                                                renderReadOnly="{Boolean}true"
+                                                text="Left"
+                                                value="left"/>
+                                            <Center
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/foundation/form/radio"
+                                                name="./borderTitleAlign"
+                                                renderReadOnly="{Boolean}true"
+                                                text="Center"
+                                                value="center"/>
+                                            <Right
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/foundation/form/radio"
+                                                name="./borderTitleAlign"
+                                                renderReadOnly="{Boolean}true"
+                                                text="Right"
+                                                value="right"/>
+                                        </items>
+                                    </borderalign>
+                                    <bordertitlecolor/>
+                                    <bordercolor/>
+                                    <bordersize
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/foundation/form/numberfield"
+                                        fieldDescription="Enter the border size. Default border size is &quot;0&quot;"
+                                        fieldLabel="Border Size"
+                                        name="./borderSize"/>
+                                </items>
+                            </borders>
+                            <advancedImage
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Advanced Image"
+                                sling:resourceType="granite/ui/components/foundation/form/fieldset"
+                                title="Advanced Image">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <externalImagePath
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                        fieldDescription="Enter HTTP Path for Image"
+                                        fieldLabel="HTTP Path of Image"
+                                        name="./externalImagePath"/>
+                                    <alt
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                        fieldDescription="Enter alternate text (or title) for the image"
+                                        fieldLabel="Alt Text/Title"
+                                        name="./image/alt"/>
+                                    <imagesize/>
+                                    <file
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="cq/gui/components/authoring/dialog/fileupload"
+                                        autoStart="{Boolean}false"
+                                        fieldLabel="Upload a file for downloading"
+                                        fileNameParameter="./fileName"
+                                        fileReferenceParameter="./fileReference"
+                                        multiple="{Boolean}false"
+                                        name="./file"
+                                        title="Upload a file for downloading"
+                                        uploadUrl="${suffix.path}"
+                                        useHTML5="{Boolean}true"/>
+                                    <createThumbnail
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/foundation/form/checkbox"
+                                        name="./createThumbnail"
+                                        text="Create Thumbnail"/>
+                                    <createthumbnail-delete
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/foundation/form/hidden"
+                                        name="./createThumbnail@Delete"
+                                        value="{Boolean}true"/>
+                                    <Image_x0020_Link/>
+                                    <imageposition
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/foundation/form/radiogroup"
+                                        fieldDescription="Choose whether the image is on the right or left of the text"
+                                        name="./imagePositionType"
+                                        renderReadOnly="{Boolean}true"
+                                        text="Image Position">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <BottomLeft
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/foundation/form/radio"
+                                                name="./imagePosition"
+                                                renderReadOnly="{Boolean}true"
+                                                text="Bottom-Left"
+                                                value="bottomLeft"/>
+                                            <Bottom
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/foundation/form/radio"
+                                                name="./imagePosition"
+                                                renderReadOnly="{Boolean}true"
+                                                text="Bottom (centered)"
+                                                value="bottom"/>
+                                            <BottomRight
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/foundation/form/radio"
+                                                name="./imagePosition"
+                                                renderReadOnly="{Boolean}true"
+                                                text="Bottom-Right"
+                                                value="bottomRight"/>
+                                            <Left
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/foundation/form/radio"
+                                                name="./imagePosition"
+                                                renderReadOnly="{Boolean}true"
+                                                text="Left"
+                                                value="left"/>
+                                            <Right
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/foundation/form/radio"
+                                                name="./imagePosition"
+                                                renderReadOnly="{Boolean}true"
+                                                text="Right"
+                                                value="right"/>
+                                            <TopLeft
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/foundation/form/radio"
+                                                name="./imagePosition"
+                                                renderReadOnly="{Boolean}true"
+                                                text="Top-Left"
+                                                value="topLeft"/>
+                                            <Top
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/foundation/form/radio"
+                                                name="./imagePosition"
+                                                renderReadOnly="{Boolean}true"
+                                                text="Top (centered)"
+                                                value="top"/>
+                                            <TopRight
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/foundation/form/radio"
+                                                name="./imagePosition"
+                                                renderReadOnly="{Boolean}true"
+                                                text="Top-Right"
+                                                value="topRight"/>
+                                        </items>
+                                    </imageposition>
+                                    <caption
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/foundation/form/textarea"
+                                        fieldLabel="Caption Text"
+                                        name="./caption"/>
+                                    <captionAlignment
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/foundation/form/radiogroup"
+                                        fieldDescription="Choose how the caption text should be vertically aligned with the image"
+                                        name="./captionAlignmentType"
+                                        renderReadOnly="{Boolean}true"
+                                        text="Caption Alignment">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <Left
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/foundation/form/radio"
+                                                name="./captionAlignment"
+                                                renderReadOnly="{Boolean}true"
+                                                text="Left"
+                                                value="left"/>
+                                            <Center
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/foundation/form/radio"
+                                                name="./captionAlignment"
+                                                renderReadOnly="{Boolean}true"
+                                                text="Center"
+                                                value="center"/>
+                                            <Right
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/foundation/form/radio"
+                                                name="./captionAlignment"
+                                                renderReadOnly="{Boolean}true"
+                                                text="Right"
+                                                value="right"/>
+                                        </items>
+                                    </captionAlignment>
+                                    <paddingTopImage
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/foundation/form/numberfield"
+                                        fieldDescription="Enter top padding to be included in the image. Default value 0px"
+                                        fieldLabel="Top Padding"
+                                        name="./paddingTopImage"/>
+                                    <paddingBottomImage
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/foundation/form/numberfield"
+                                        fieldDescription="Enter bottom padding to be included in the image. Default value 0px"
+                                        fieldLabel="Bottom Padding"
+                                        name="./paddingBottomImage"/>
+                                    <paddingLeftImage
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/foundation/form/numberfield"
+                                        fieldDescription="Enter left padding to be included in the image. Default value 0px"
+                                        fieldLabel="Left Padding"
+                                        name="./paddingLeftImage"/>
+                                    <paddingRightImage
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/foundation/form/numberfield"
+                                        fieldDescription="Enter right padding to be included in the image. Default value 0px"
+                                        fieldLabel="Right Padding"
+                                        name="./paddingRightImage"/>
+                                </items>
+                            </advancedImage>
+                            <paddings
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Padding"
+                                sling:resourceType="granite/ui/components/foundation/form/fieldset"
+                                title="Padding">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <paddingTop
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/foundation/form/numberfield"
+                                        fieldDescription="Enter top padding. Default value 0px"
+                                        fieldLabel="Top Padding"
+                                        name="./paddingTop"/>
+                                    <paddingBottom
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/foundation/form/numberfield"
+                                        fieldDescription="Enter bottom padding. Default value 0px"
+                                        fieldLabel="Bottom Padding"
+                                        name="./paddingBottom"/>
+                                    <paddingLeft
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/foundation/form/numberfield"
+                                        fieldDescription="Enter left padding. Default value 0px"
+                                        fieldLabel="Left Padding"
+                                        name="./paddingLeft"/>
+                                    <paddingRight
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/foundation/form/numberfield"
+                                        fieldDescription="Enter right padding. Default value 0px"
+                                        fieldLabel="Right Padding"
+                                        name="./paddingRight"/>
+                                </items>
+                            </paddings>
+                            <margins
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Margin"
+                                sling:resourceType="granite/ui/components/foundation/form/fieldset"
+                                title="Margin">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <marginTop
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/foundation/form/numberfield"
+                                        fieldDescription="Enter top margin. Default value 0px"
+                                        fieldLabel="Top Margin"
+                                        name="./marginTop"/>
+                                    <marginBottom
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/foundation/form/numberfield"
+                                        fieldDescription="Enter bottom margin. Default value 0px"
+                                        fieldLabel="Bottom Margin"
+                                        name="./marginBottom"/>
+                                    <marginLeft
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/foundation/form/numberfield"
+                                        fieldDescription="Enter left margin. Default value 0px"
+                                        fieldLabel="Left Margin"
+                                        name="./marginLeft"/>
+                                    <marginRight
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/foundation/form/numberfield"
+                                        fieldDescription="Enter right margin. Default value 0px"
+                                        fieldLabel="Right Margin"
+                                        name="./marginRight"/>
+                                </items>
+                            </margins>
+                        </items>
+                    </columns>
+                </items>
+            </Advanced>
+        </items>
+    </content>
+</jcr:root>

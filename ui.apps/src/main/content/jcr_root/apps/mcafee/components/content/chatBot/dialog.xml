@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="cq:Dialog"
+    title="Properties"
+    xtype="panel">
+    <items jcr:primaryType="cq:WidgetCollection">
+        <text
+            jcr:primaryType="cq:Widget"
+            fieldLabel="Title"
+            name="./text"
+            xtype="textfield"/>
+        <description
+            jcr:primaryType="cq:Widget"
+            fieldLabel="Enter Description"
+            name="./description"
+            xtype="textarea"/>
+        <Image
+            jcr:primaryType="cq:Widget"
+            allowBlank="{Boolean}false"
+            fieldDescription="Select Image."
+            fieldLabel="Image"
+            name="./image"
+            rootPath="/content/dam/ctc"
+            xtype="pathfield"/>
+        <rootPath
+            jcr:primaryType="cq:Widget"
+            fieldLabel="Link Path"
+            name="./sitemappathURL"
+            xtype="pathfield"/>
+        <linkLabel
+            jcr:primaryType="cq:Widget"
+            fieldLabel="Link Label"
+            name="./linkLabel"
+            xtype="textfield"/>
+    </items>
+</jcr:root>

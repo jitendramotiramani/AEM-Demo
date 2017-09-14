@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    title="Featured Slider Dialog"
+    xtype="tabpanel">
+    <items jcr:primaryType="cq:WidgetCollection">
+        <featuredSliderTab
+            jcr:primaryType="nt:unstructured"
+            title="Featured Slider"
+            xtype="panel">
+            <items jcr:primaryType="cq:WidgetCollection">
+                <sectionLabel
+                    jcr:primaryType="cq:Widget"
+                    fieldLabel="Add Slider Content"
+                    name="./featuredSlider"
+                    xtype="multifield">
+                    <fieldConfig
+                        jcr:primaryType="cq:Widget"
+                        xtype="featuredSliderWidget"/>
+                </sectionLabel>
+            </items>
+        </featuredSliderTab>
+    </items>
+</jcr:root>

@@ -1,0 +1,8 @@
+<sly data-sly-use.blade="com.mcafee.dee.global.core.models.content.BladeContainer">
+	<div id="blade" style="${blade.backgroundColor @ context='unsafe'};${blade.backgroundImage @ context='unsafe'}">
+		<div data-sly-resource="${'par' @ resourceType='wcm/foundation/components/parsys'}"></div>
+	</div>
+	<h3 data-sly-test="${blade.backgroundColor == ''}">
+		Please configure blade background color.
+	</h3>
+</sly> 

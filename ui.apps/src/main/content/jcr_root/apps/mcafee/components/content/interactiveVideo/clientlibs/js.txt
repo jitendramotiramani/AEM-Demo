@@ -1,0 +1,14 @@
+#base=js
+
+multicomp.js
+bxslider.js
+custom.js
+jquery.js
+jquery.media.js
+jquery.media.timeline.js
+jquery_ui-1-8-3.js
+libs.js
+modernizr.js
+modernizr.custom.js
+player.js
+videoMedia.js

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Widget"
+    defaultValue="left"
+    fieldLabel="Image Size"
+    name="./imageSize"
+    type="radio"
+    xtype="selection">
+    <options jcr:primaryType="cq:WidgetCollection">
+        <twentyfive
+            jcr:primaryType="nt:unstructured"
+            text="25%"
+            value="25"/>
+        <fifty
+            jcr:primaryType="nt:unstructured"
+            text="50%"
+            value="50"/>
+        <seventyfive
+            jcr:primaryType="nt:unstructured"
+            text="75%"
+            value="75"/>
+        <hundred
+            jcr:primaryType="nt:unstructured"
+            text="100%"
+            value="100"/>
+    </options>
+</jcr:root>

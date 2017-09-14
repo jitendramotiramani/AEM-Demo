@@ -1,0 +1,16 @@
+<!--/*
+    Column Control Component for Responsive Pages
+*/-->
+<sly data-sly-use.col="com.mcafee.dee.global.core.models.content.ColumnControl" data-sly-test.isConfigured="${col.classes}">
+    <div class="${col.enableMargin ? 'container' : 'container-fluid'} ${col.enableGutters ? 'gutter' : '' }">
+    <div class="row ${col.enableGutters ? '': 'no-gutter'}" data-sly-list="${col.classes}">
+        <div class="${item}">
+            <sly data-sly-resource="${'col-par-{0}' @ resourceType='wcm/foundation/components/parsys', format=[itemList.index]}" />
+        </div>
+    </div>
+    </div>
+</sly>
+<h3 data-sly-test="${ !isConfigured && (wcmmode.edit || wcmmode.design) }">
+    Please configure the number of columns required.
+</h3>
+<div class="clearfix"></div>

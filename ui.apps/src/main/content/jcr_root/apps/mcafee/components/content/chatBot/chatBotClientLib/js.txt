@@ -1,0 +1,4 @@
+##js/bootstrap.js
+#js/jquery.session.js
+#js/chat.js
+js/chatApi.js

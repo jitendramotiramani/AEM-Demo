@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    jcr:title="Interactive Video"
+    componentGroup="healthcareComponentGroup"
+    xtype="panel">
+    <items jcr:primaryType="cq:WidgetCollection">
+        <video
+            jcr:primaryType="cq:Widget"
+            fieldDescription="Select a path of a Video"
+            fieldLabel="Video Path"
+            name="./video"
+            rootPath="/content/dam/healthcare/Videos"
+            xtype="pathfield"/>
+        <videocontent
+            jcr:primaryType="cq:Widget"
+            fieldDescription="Supported maximum for 4 Timeline Points"
+            fieldLabel="Video Content"
+            name="./videocontent"
+            xtype="multimulticompositefield">
+            <fieldConfigs jcr:primaryType="cq:WidgetCollection">
+                <timlinepoint
+                    jcr:primaryType="cq:Widget"
+                    fieldDescription="Enter the Timeline Point in seconds(ex: 10 or 20 or 30)"
+                    fieldLabel="Timeline Point"
+                    name="timelinepoint"
+                    xtype="textfield"/>
+                <timelinecontent
+                    jcr:primaryType="cq:Widget"
+                    fieldDescription="Enter the Timeline Content for the Timeline Point"
+                    fieldLabel="Timeline Content"
+                    name="timelinecontent"
+                    xtype="richtext">
+                    <listeners
+                        jcr:primaryType="nt:unstructured"
+                        destroy="function() {this.el.dom={};}"/>
+                </timelinecontent>
+            </fieldConfigs>
+        </videocontent>
+    </items>
+</jcr:root>

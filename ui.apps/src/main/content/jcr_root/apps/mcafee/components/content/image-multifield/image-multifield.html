@@ -1,0 +1,14 @@
+<div data-sly-use.imageMultiField="com.mcafee.dee.global.core.models.content.ImageMultiFieldDemoModel">
+	<ul data-sly-list="${imageMultiField.imageFieldValues}">
+            <li >
+            	<b>Language ::</b> ${item.language} <br>
+            	<b>Product Image Name ::</b> ${item.productImageName} <br>
+            	<b>Product Name ::</b> ${item.productName} <br>
+            	<b>Show ::</b> ${item.show} <br>
+            	<img src='${item.productImageRef}' width='750' height='301'>
+            </li>     
+    </ul>
+    <h3 data-sly-test="${wcmmode.edit || wcmmode.design}">
+		Please add data to the component.
+	</h3>
+</div>

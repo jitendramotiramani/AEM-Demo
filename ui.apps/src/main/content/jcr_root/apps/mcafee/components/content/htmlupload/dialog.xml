@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    title="dialog"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <upload_html
+                jcr:primaryType="cq:Widget"
+                title="Upload HTML"
+                xtype="panel">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <file
+                        jcr:primaryType="cq:Widget"
+                        autoUploadDelay="1"
+                        ddAccept="[text/html]"
+                        ddGroups="[media]"
+                        fieldLabel="Upload Html File"
+                        fileNameParameter="./fileName"
+                        fileReferenceParameter="./fileReference"
+                        mimeTypes="*.html"
+                        name="./file"
+                        sizeLimit="100"
+                        xtype="html5smartfile"/>
+                    <html_text
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Please provide HTML content by uploading html file or by using Text Area(Uploading html file will take precedence over the HTML content)."
+                        fieldLabel="HTML Content"
+                        height="{Long}500"
+                        name="./source"
+                        xtype="textarea"/>
+                </items>
+            </upload_html>
+        </items>
+    </items>
+    <listeners
+        jcr:primaryType="nt:unstructured"
+        beforesubmit="function(dialog){&#xa;&#x9;var htmlText = dialog.getField(&quot;./source&quot;);&#xa;&#x9;var file = dialog.getField(&quot;./file&quot;);&#xa;&#x9;if(htmlText.getValue()===&quot;&quot; &amp;&amp; file.fileInfo==null){&#xa;&#x9;&#x9;CQ.Ext.Msg.show(&#xa;                {title: 'Empty',  msg: 'please upload HTML file or enter some HTML content',icon:CQ.Ext.MessageBox.WARNING,buttons: CQ.Ext.Msg.OK}&#xa;            );&#xa;&#x9;&#x9;return false;&#xa;&#x9;}&#xa;}"/>
+</jcr:root>

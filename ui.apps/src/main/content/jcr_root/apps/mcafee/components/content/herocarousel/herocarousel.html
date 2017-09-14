@@ -1,0 +1,19 @@
+<section class="hero js-bg" data-sly-use.carousel="com.mcafee.dee.global.core.models.content.Carousel">
+    <div class="hero-carousel">
+    	<sly data-sly-list="${carousel.carouselFieldValues}">
+        <div class="slide">
+            <div class="bg-stretch" style="background-image:url('${item.backgroundImage @ context='unsafe'}'); background-size: cover; background-position: center center; background-repeat: no-repeat;"></div>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-8">
+                        <img data-sly-test="${item.overlayImage}" src="${item.overlayImage}" alt="${item.overlayImageAlt}" />
+                        <h2 data-sly-test="${item.heading}" style="margin-bottom: 15px;font-size:${item.headingSize @ context='styleToken'};color:${item.headingColor @ context='styleToken'};" data-sly-text="${item.heading}"></h2>
+                        <p data-sly-test="${item.subHeading}" style="font-size:${item.subHeadingSize @ context='styleToken'};color:${item.subHeadingColor @ context='styleToken'};" data-sly-text="${item.subHeading}"></p>
+                        <a href="${item.buttonURL}.html" class="btn transparent" tabindex="-1" data-sly-text="${item.buttonText}"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </sly>
+    </div>
+</section>
